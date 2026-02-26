@@ -4,36 +4,24 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 AR = ar
-ARFLAGS = rcs 
+ARFLAGS = rcs
 
 RM = rm -f
 
-SRC = ft_isalpha.c \
-      ft_isdigit.c \
-      ft_isalnum.c \
-      ft_isprint.c \
-      ft_isascii.c \
-      ft_strlen.c  \
-      ft_atoi.c    \
-      ft_strncmp   \
-      ft_strcpy    \
-      ft_memset    \
-      ft_bzero     \
-      ft_strlcat   \
-      
-
-OBJ = $(SRC:.c=.o)
+SRC = $(wildcard src/*.c)
+OBJ = $(SRC:src/%.c=obj/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
-%.o: %.c libft.h
+obj/%.o: src/%.c libft.h
+	@mkdir -p obj
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) obj/*.o
 
 fclean: clean
 	$(RM) $(NAME)
