@@ -16,7 +16,11 @@ SRC = ft_isalpha.c \
       ft_strlen.c  \
       ft_atoi.c    \
       ft_strncmp   \
-      ft_strcpy
+      ft_strcpy    \
+      ft_memset    \
+      ft_bzero     \
+      ft_strlcat   \
+      
 
 OBJ = $(SRC:.c=.o)
 
