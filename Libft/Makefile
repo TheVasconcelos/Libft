@@ -1,32 +1,39 @@
-
 NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_isalpha.c  \
-      ft_isdigit.c  \
-      ft_isalnum.c  \
-      ft_isprint.c  \
-      ft_strlen.c	\
-	  ft_isascii.c	\
-	  ft_atoi.c		\
+AR = ar
+ARFLAGS = rcs 
 
+RM = rm -f
+
+SRC = ft_isalpha.c \
+      ft_isdigit.c \
+      ft_isalnum.c \
+      ft_isprint.c \
+      ft_isascii.c \
+      ft_strlen.c  \
+      ft_atoi.c    \
+      ft_strncmp   \
+      ft_strcpy
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
