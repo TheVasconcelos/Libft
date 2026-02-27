@@ -16,6 +16,7 @@ int ft_strncmp(const char *s1, const char *s2, unsigned int n);
 void    *ft_memset(void *b, int c, unsigned int len);
 void    ft_bzero(void *s, unsigned int n);
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize);
+char    *ft_strdup(const char *src);
 
 
 
