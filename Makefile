@@ -8,20 +8,20 @@ ARFLAGS = rcs
 
 RM = rm -f
 
-SRC = $(wildcard src/*.c)
+SRC = $(shell find src -name "*.c")
 OBJ = $(SRC:src/%.c=obj/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	$(AR) $(ARFLAGS) $@ $^
 
 obj/%.o: src/%.c libft.h
 	@mkdir -p obj
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $(shell find src -name "$*.c") -o $@
 
 clean:
-	$(RM) obj/*.o
+	$(RM) -r obj
 
 fclean: clean
 	$(RM) $(NAME)
