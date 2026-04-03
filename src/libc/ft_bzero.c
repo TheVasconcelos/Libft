@@ -1,8 +1,9 @@
+#include <stddef.h>
 
-void    ft_bzero(void *s, unsigned int n)
+void    ft_bzero(void *s, size_t n)
 {
     unsigned char *ptr;
-    unsigned int  i;
+    size_t  i;
 
     ptr = (unsigned char *)s;
     i = 0;
