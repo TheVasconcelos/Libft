@@ -1,59 +1,28 @@
-#include <stdlib.h>
+#include "libft.h"
 
-char    *ft_strtrim(char const *s1, char const *set)
+static int	in_set(char c, char const *set)
 {
-    char    *new;
-    size_t  i, f, j, len;
-    int     k, found;
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
 
-    if (!s1 || !set)
-        return (NULL);
-    if (ft_strlen(s1) == 0)
-        return (ft_strdup(""));
-    f = ft_strlen(s1) - 1;
-    i = 0;
-    while (s1[i])
-    {
-        k = 0;
-        found = 0;
-        while (set[k])
-        {
-            if (s1[i] == set[k])
-                found = 1;
-            k++;
-        }  
-        if (!found)
-            break;
-        i++;
-    }
-        while (f >= i)
-    {
-        k = 0;
-        found = 0;
-        while (set[k])
-        {
-            if (s1[f] == set[k])
-                found = 1;
-            k++;
-        }  
-        if (!found)
-            break;
-        f--;
-    }  
-    if (f < i)
-        len = 0;
-    else 
-        len = f - i + 1;
-    new = malloc (len + 1);
-    if (new == NULL)
-        return (NULL);
-    j = 0;
-    while (i <= f)
-    {
-        new[j] = s1[i];
-        i++;
-        j++;
-    }
-    new[j] = '\0';
-    return (new);
+char	*ft_strtrim(char const *str, char const *set)
+{
+	size_t	start;
+	size_t	end;
+
+	if (!str || !set)
+		return (NULL);
+	start = 0;
+	while (str[start] && in_set(str[start], set))
+		start++;
+	end = ft_strlen(str);
+	while (end > start && in_set(str[end - 1], set))
+		end--;
+	return (ft_substr(str, start, end - start));
 }
