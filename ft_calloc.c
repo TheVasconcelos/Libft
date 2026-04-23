@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 00:54:45 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 22:04:29 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 23:32:15 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*new;
 	size_t			i;
 
-	if (size && nmemb > SIZE_MAX / size)
+	if (size && nmemb > (SIZE_MAX) / size)
 		return (NULL);
-	i = nmemb * size;
-	new = malloc(i);
+	new = malloc(nmemb * size);
 	if (!new)
 		return (NULL);
 	i = 0;
@@ -39,6 +38,5 @@ int main(void)
 		s[0] = 'H';
 		s[1] = 'i';
 		printf("Aqui ja tem coisas: %s\n", s);				 
-		free(s);
-}
- */
+		free(s);		
+} */

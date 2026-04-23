@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 22:14:16 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/19 00:36:15 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 21:16:56 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	i = 0;
 	while (i < size && dest[i])
 		i++;
-	if (!src)
-		return (i);
 	s = ft_strlen(src);
 	if (i == size)
 		return (i + s);
@@ -37,12 +35,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (i - j + s);
 }
 
-/* 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main ()
 {
-char dest[20] = "123456";
-size_t		i = ft_strlcat(dest, "1234567", 20);
+char dest[] = "123456";
+char dest1[10] = "154";
+
+size_t		i = ft_strlcat(dest1, dest, 10);
 printf("%zu", i);
-} */
+}  */

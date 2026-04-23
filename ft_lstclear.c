@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 22:24:23 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/21 00:03:33 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 19:13:16 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = next_node;
 	}
 }
-

@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 01:06:13 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 23:07:15 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 19:06:00 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	words_counter(char const *s, char c)
 {
-	int	count;
-	
+	int		count;
+
 	count = 0;
 	while (*s)
 	{
@@ -35,6 +35,7 @@ static void	free_split(char **result, int j)
 		free(result[--j]);
 	free(result);
 }
+
 static int	fill_words(char **str, char const *s, char c, int words)
 {
 	int		i;
@@ -43,9 +44,9 @@ static int	fill_words(char **str, char const *s, char c, int words)
 
 	i = 0;
 	j = 0;
-	while (j < words && s[i]) 
+	while (j < words && s[i])
 	{
-		while (s[i] == c) 	
+		while (s[i] == c)
 			i++;
 		if (!s[i])
 			break ;
@@ -67,7 +68,7 @@ static int	fill_words(char **str, char const *s, char c, int words)
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	int 	words;
+	int		words;
 
 	if (!s)
 		return (NULL);

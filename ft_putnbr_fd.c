@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 18:54:47 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/19 00:38:23 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 19:13:45 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb;
-	long div;
-	char c;
+	long	nb;
+	long	div;
+	char	c;
 
 	nb = (long)n;
 	if (nb < 0)

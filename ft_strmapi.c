@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 00:42:31 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/19 00:51:45 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 19:15:19 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	len;
-	unsigned int 	i;
+	unsigned int	i;
 	char			*new;
 
 	len = ft_strlen(s);

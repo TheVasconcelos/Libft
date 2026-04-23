@@ -6,13 +6,13 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 00:58:42 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 21:30:52 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 23:29:20 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	ft_striteri(char *s, void(*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
@@ -20,7 +20,6 @@ void	ft_striteri(char *s, void(*f)(unsigned int, char*))
 	while (s[i])
 	{
 		f(i, &s[i]);
-		printf("%d", s[i]);
 		i++;
 	}
 }

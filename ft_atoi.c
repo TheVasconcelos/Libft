@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:20:57 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/19 02:49:00 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 23:32:28 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 		i++;
 	sign = 1;
 	if (nptr[i] == '-')
-			sign = -1;
+		sign = -1;
 	if (nptr[i] == '-' || (nptr[i] == '+'))
 		i++;
 	result = 0;
