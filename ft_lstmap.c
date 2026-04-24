@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 22:37:25 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/23 18:47:37 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/24 01:54:38 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+/* void *f(void *c) { return (ft_itoa(*(int *)c * 2)); }
+void del(void *c) { free(c); }
+
+int main(void)
+{
+	int n = 21;
+	t_list *lst = ft_lstnew(&n);
+	t_list *mapped = ft_lstmap(lst, f, del);
+	printf("%s\n", (char *)mapped->content);
+} */

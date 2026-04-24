@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 13:20:57 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/23 23:32:28 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 23:41:35 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,11 @@ int	ft_atoi(const char *nptr)
 {
 	char str[] = "+1";
 	char str[] = "  +42Lyon";
-	char str[] = "  +42Lyon";
+	char str[] = "  -+42Lyon";
+	char str[] = "  =-+42Lyon";
+	char str[] = "";
+	char str[] = "  $#@!$";
+
 	printf("[%d]\n", ft_atoi(str));
 	return (0);
 } */

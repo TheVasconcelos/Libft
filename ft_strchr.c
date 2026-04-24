@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 22:53:22 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/23 20:00:12 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/23 23:52:31 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
-
-	i = 0;
 	while (*s)
 	{
 		if (*s == (unsigned char)c)
@@ -27,3 +24,14 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
+/* #include <stdio.h> 
+
+int main(void)
+{
+	printf("%s\n", ft_strchr("hello", 'l'));  // llo
+	printf("%s\n", ft_strchr("hello", 'h'));  // hello
+	printf("%p\n", ft_strchr("hello", 'z'));  // null
+	printf("%s\n", ft_strchr("hello", '\0')); // (empty string)
+	return (0);
+} */

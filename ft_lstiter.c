@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 22:31:49 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/21 00:03:20 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/24 01:54:29 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+
+/* void f(void *c) { printf("%s\n", (char *)c); }
+
+int main(void)
+{
+	t_list *lst = ft_lstnew("hello");
+	ft_lstadd_back(&lst, ft_lstnew("world"));
+	ft_lstiter(lst, f);
+} */

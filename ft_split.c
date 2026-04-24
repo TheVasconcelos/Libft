@@ -6,13 +6,13 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/19 01:06:13 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/23 19:06:00 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/24 01:41:02 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	words_counter(char const *s, char c)
+static int	counter(char const *s, char c)
 {
 	int		count;
 
@@ -36,7 +36,7 @@ static void	free_split(char **result, int j)
 	free(result);
 }
 
-static int	fill_words(char **str, char const *s, char c, int words)
+static int	builder(char **str, char const *s, char c, int words)
 {
 	int		i;
 	int		j;
@@ -72,18 +72,20 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	words = words_counter(s, c);
+	words = counter(s, c);
 	str = malloc((sizeof(char *) * (words + 1)));
 	if (!str)
 		return (NULL);
-	if (!fill_words(str, s, c, words))
+	if (!builder(str, s, c, words))
 		return (NULL);
 	return (str);
 }
 
-/* int main ()
+/* #include <stdio.h>
+
+int main ()
 {
-	char	str[] = "Ola---Manuel--hehe-!";
+	char	str[] = "Ola---[ inserir nome ]--hehe-!";
 	char	**splitter;
 	splitter = ft_split(str, '-');
 	printf("%s\n", splitter[0]);
