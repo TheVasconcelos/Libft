@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 22:24:23 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/23 19:13:16 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/26 16:09:59 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = next_node;
 	}
 }
+
+/* int main(void)
+{
+	t_list *lst = ft_lstnew(ft_strdup("42"));
+	lst->next = ft_lstnew(ft_strdup("Lisboa"));
+
+	ft_lstclear(&lst, free);
+
+	printf(lst ? "NOK\n" : "lst = NULL ✓\n");
+} */

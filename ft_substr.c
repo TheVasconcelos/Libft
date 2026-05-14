@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 01:33:07 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 23:15:52 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/05/13 23:10:05 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+		
 	if (start >= ft_strlen(s) || len == 0)
 	{
 		new = malloc(1);
@@ -27,8 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		new[0] = '\0';
 		return (new);
 	}
+	
 	if (start + len > ft_strlen(s))
 		len = ft_strlen(s) - start;
+		
 	new = malloc(len + 1);
 	if (!new)
 		return (NULL);
@@ -38,14 +41,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new[i] = '\0';
 	return (new);
 }
+#include <stdio.h> 
 
-/* int main ()
+int main ()
 {
 	char  str1[] = "Ola Manuel !!!! ";
 	char *str2;
 
-	str2 = ft_substr(str1, 0, 7);
+	str2 = ft_substr(str1, 7, 0);
 	printf("%s", str2);
 
 }
- */

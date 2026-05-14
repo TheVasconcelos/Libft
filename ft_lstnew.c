@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 19:10:46 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 23:29:55 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/26 15:34:35 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-/* int main ()
+
+/* #include <stdio.h> 
+
+int main ()
 {
 	t_list	*atual;
 

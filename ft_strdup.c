@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 22:01:45 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/20 23:05:51 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/05/13 23:09:46 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ char	*ft_strdup(const char *s)
 	printf("Original: %s\n", src);
 	printf("New antes: %s\n", new);
 	printf("New depois: %s\n", ft_strdup(src));
-} */
+}  */

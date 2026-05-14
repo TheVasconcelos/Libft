@@ -6,7 +6,7 @@
 /*   By: mavascon <mavascon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 22:12:23 by mavascon          #+#    #+#             */
-/*   Updated: 2026/04/24 01:56:37 by mavascon         ###   ########.fr       */
+/*   Updated: 2026/04/26 16:04:38 by mavascon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ int main(void)
 	printf("%s\n", (char *)lst->content);
 	ft_lstdelone(lst, del);
 	printf("deleted\n");
-} */
+} 
+// using printf in concent after free would be undefined behaviour
+*/
